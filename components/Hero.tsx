@@ -33,7 +33,7 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-          Every file, one app.
+          View every file, one app.
           <br />
           <span className="text-[#5b8af0]">No more switching.</span>
         </h1>

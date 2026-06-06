@@ -1,4 +1,19 @@
-export default function Download() {
+async function getLatestVersion(): Promise<string> {
+  try {
+    const res = await fetch(
+      "https://api.github.com/repos/sean-yun-2022/viewfiles-releases/releases/latest",
+      { next: { revalidate: 3600 } }
+    );
+    if (!res.ok) return "";
+    const data = await res.json();
+    return data.tag_name ?? "";
+  } catch {
+    return "";
+  }
+}
+
+export default async function Download() {
+  const version = await getLatestVersion();
   return (
     <section id="download" className="py-24 px-6">
       <div className="max-w-3xl mx-auto text-center">
@@ -30,6 +45,10 @@ export default function Download() {
             Download for Windows
           </a>
         </div>
+
+        {version && (
+          <p className="text-white/25 text-sm mb-8">{version}</p>
+        )}
 
         <div className="grid grid-cols-3 gap-6 max-w-sm mx-auto text-center">
           {[

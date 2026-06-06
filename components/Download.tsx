@@ -11,7 +11,7 @@ export default function Download() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
           <a
-            href="https://github.com/sean-yun-2022/viewfiles/releases/latest"
+            href="https://github.com/sean-yun-2022/viewfiles-releases/releases/latest"
             className="flex items-center gap-3 bg-[#5b8af0] hover:bg-[#7aa3f5] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base w-full sm:w-auto justify-center"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -21,7 +21,7 @@ export default function Download() {
             <span className="text-white/60 text-sm font-normal">Apple Silicon & Intel</span>
           </a>
           <a
-            href="https://github.com/sean-yun-2022/viewfiles/releases/latest"
+            href="https://github.com/sean-yun-2022/viewfiles-releases/releases/latest"
             className="flex items-center gap-3 bg-white/6 hover:bg-white/10 border border-white/10 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base w-full sm:w-auto justify-center"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

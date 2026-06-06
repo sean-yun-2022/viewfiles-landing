@@ -1,6 +1,21 @@
 import Image from "next/image";
 
-export default function Hero() {
+async function getLatestVersion(): Promise<string> {
+  try {
+    const res = await fetch(
+      "https://api.github.com/repos/sean-yun-2022/viewfiles-releases/releases/latest",
+      { next: { revalidate: 3600 } }
+    );
+    if (!res.ok) return "";
+    const data = await res.json();
+    return data.tag_name ?? "";
+  } catch {
+    return "";
+  }
+}
+
+export default async function Hero() {
+  const version = await getLatestVersion();
   return (
     <section className="pt-32 pb-16 px-6 text-center relative overflow-hidden">
       {/* Glow */}
@@ -63,6 +78,7 @@ export default function Hero() {
 
         <p className="mt-5 text-sm text-white/30">
           Mac (Apple Silicon & Intel) · Windows · Free 30-day trial
+          {version && <span className="ml-2 text-white/20">· {version}</span>}
         </p>
       </div>
     </section>

@@ -181,13 +181,13 @@ export default function FeaturesContent() {
           <p className="text-white/50 mb-10">30-day free trial · No credit card required</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://github.com/sean-yun-2022/viewfiles-releases/releases/latest"
+              href="/download/mac"
               className="flex items-center gap-2.5 bg-[#5b8af0] hover:bg-[#7aa3f5] text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
             >
               Download for Mac
             </a>
             <a
-              href="https://github.com/sean-yun-2022/viewfiles-releases/releases/latest"
+              href="/download/windows"
               className="flex items-center gap-2.5 bg-white/6 hover:bg-white/10 border border-white/10 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
             >
               Download for Windows

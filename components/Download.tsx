@@ -1,0 +1,49 @@
+export default function Download() {
+  return (
+    <section id="download" className="py-24 px-6">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-5">
+          Start for free today
+        </h2>
+        <p className="text-white/50 text-lg mb-12">
+          30-day free trial · No credit card required · Cancel anytime
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <a
+            href="https://github.com/sean-yun-2022/viewfiles/releases/latest"
+            className="flex items-center gap-3 bg-[#5b8af0] hover:bg-[#7aa3f5] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base w-full sm:w-auto justify-center"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+            </svg>
+            Download for Mac
+            <span className="text-white/60 text-sm font-normal">Apple Silicon & Intel</span>
+          </a>
+          <a
+            href="https://github.com/sean-yun-2022/viewfiles/releases/latest"
+            className="flex items-center gap-3 bg-white/6 hover:bg-white/10 border border-white/10 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base w-full sm:w-auto justify-center"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 12V6.75l6-1.32v6.57H3zm17 0V5.5l-9 1.97V12h9zm-17 .75H9v6.57l-6-1.32v-5.25zm17 0h-9v5.53l9 1.97V12.75z" />
+            </svg>
+            Download for Windows
+          </a>
+        </div>
+
+        <div className="grid grid-cols-3 gap-6 max-w-sm mx-auto text-center">
+          {[
+            { label: "30 days", desc: "Free trial" },
+            { label: "2 devices", desc: "Per license" },
+            { label: "Local", desc: "File storage" },
+          ].map((item) => (
+            <div key={item.label}>
+              <div className="text-white font-bold text-xl">{item.label}</div>
+              <div className="text-white/40 text-xs mt-0.5">{item.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

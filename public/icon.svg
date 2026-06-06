@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2035"/>
+      <stop offset="100%" style="stop-color:#0f1117"/>
+    </linearGradient>
+    <linearGradient id="bookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5b8af0"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="brainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa"/>
+      <stop offset="100%" style="stop-color:#f472b6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="1024" height="1024" rx="220" fill="url(#bg)"/>
+  <!-- Subtle inner border -->
+  <rect x="2" y="2" width="1020" height="1020" rx="219" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="3"/>
+
+  <!-- Book base (bottom) -->
+  <rect x="210" y="580" width="604" height="64" rx="14" fill="url(#bookGrad)" opacity="0.9"/>
+
+  <!-- Book pages (left spine) -->
+  <rect x="210" y="320" width="52" height="324" rx="10" fill="#3d5a9e" opacity="0.8"/>
+
+  <!-- Book cover (right) -->
+  <rect x="262" y="320" width="552" height="324" rx="10" fill="url(#bookGrad)" opacity="0.85"/>
+
+  <!-- Book lines (page lines) -->
+  <rect x="310" y="378" width="340" height="10" rx="5" fill="rgba(255,255,255,0.25)"/>
+  <rect x="310" y="410" width="280" height="10" rx="5" fill="rgba(255,255,255,0.18)"/>
+  <rect x="310" y="442" width="310" height="10" rx="5" fill="rgba(255,255,255,0.18)"/>
+
+  <!-- Brain shape (stylized, sitting on book) -->
+  <g filter="url(#glow)" transform="translate(512, 310)">
+    <!-- Brain left lobe -->
+    <ellipse cx="-72" cy="0" rx="90" ry="80" fill="url(#brainGrad)" opacity="0.92"/>
+    <!-- Brain right lobe -->
+    <ellipse cx="72" cy="0" rx="90" ry="80" fill="url(#brainGrad)" opacity="0.92"/>
+    <!-- Center groove -->
+    <rect x="-10" y="-80" width="20" height="80" rx="10" fill="#0f1117" opacity="0.5"/>
+    <!-- Brain fold details -->
+    <path d="M-120,-30 Q-90,-60 -60,-30 Q-30,-60 0,-30" stroke="rgba(255,255,255,0.3)" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M20,-30 Q50,-60 80,-30 Q110,-60 130,-30" stroke="rgba(255,255,255,0.3)" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M-130,20 Q-100,-10 -70,20" stroke="rgba(255,255,255,0.2)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M70,20 Q100,-10 130,20" stroke="rgba(255,255,255,0.2)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <!-- Stem connecting to book -->
+    <rect x="-16" y="70" width="32" height="50" rx="10" fill="url(#brainGrad)" opacity="0.7"/>
+  </g>
+
+  <!-- Node dots (knowledge graph hint) -->
+  <circle cx="180" cy="220" r="14" fill="#5b8af0" opacity="0.7"/>
+  <circle cx="840" cy="200" r="10" fill="#a78bfa" opacity="0.6"/>
+  <circle cx="160" cy="760" r="8" fill="#a78bfa" opacity="0.45"/>
+  <circle cx="860" cy="780" r="11" fill="#5b8af0" opacity="0.5"/>
+
+  <!-- Connection lines between nodes (faint) -->
+  <line x1="180" y1="220" x2="840" y2="200" stroke="rgba(91,138,240,0.15)" stroke-width="2"/>
+  <line x1="180" y1="220" x2="160" y2="760" stroke="rgba(167,139,250,0.12)" stroke-width="2"/>
+  <line x1="840" y1="200" x2="860" y2="780" stroke="rgba(167,139,250,0.12)" stroke-width="2"/>
+</svg>

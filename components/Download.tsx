@@ -2,7 +2,7 @@ async function getLatestVersion(): Promise<string> {
   try {
     const res = await fetch(
       "https://api.github.com/repos/sean-yun-2022/viewfiles-releases/releases/latest",
-      { next: { revalidate: 3600 } }
+      { next: { revalidate: 300 } }
     );
     if (!res.ok) return "";
     const data = await res.json();

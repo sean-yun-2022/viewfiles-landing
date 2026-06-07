@@ -1,7 +1,13 @@
 import { redirect } from 'next/navigation'
 
-const LATEST_MAC = 'https://github.com/sean-yun-2022/viewfiles-releases/releases/download/v0.2.9/ViewFiles-0.2.9-arm64.dmg'
+const RELEASES_API = 'https://api.github.com/repos/sean-yun-2022/viewfiles-releases/releases/latest'
 
-export function GET() {
-  redirect(LATEST_MAC)
+export async function GET() {
+  const res = await fetch(RELEASES_API, {
+    headers: { Accept: 'application/vnd.github+json' },
+    next: { revalidate: 300 }, // 5분 캐시
+  })
+  const data = await res.json()
+  const asset = data.assets?.find((a: { name: string }) => a.name.endsWith('-arm64.dmg'))
+  redirect(asset?.browser_download_url ?? 'https://viewfiles.app')
 }

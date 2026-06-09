@@ -186,12 +186,6 @@ export default function FeaturesContent() {
             >
               Download for Mac
             </a>
-            <a
-              href="/download/windows"
-              className="flex items-center gap-2.5 bg-white/6 hover:bg-white/10 border border-white/10 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors"
-            >
-              Download for Windows
-            </a>
           </div>
           <p className="mt-6 text-sm text-white/30">
             <a href="/" className="hover:text-white/50 transition-colors">← Back to home</a>

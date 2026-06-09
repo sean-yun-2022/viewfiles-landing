@@ -67,17 +67,10 @@ export default async function Hero() {
             <AppleIcon />
             Download for Mac
           </a>
-          <a
-            href="#download"
-            className="flex items-center gap-2.5 bg-white/6 hover:bg-white/10 border border-white/10 text-white font-semibold px-7 py-3.5 rounded-xl transition-colors text-base"
-          >
-            <WindowsIcon />
-            Download for Windows
-          </a>
         </div>
 
         <p className="mt-5 text-sm text-white/30">
-          Mac (Apple Silicon & Intel) · Windows · Free 30-day trial
+          Mac (Apple Silicon & Intel) · Free 30-day trial
           {version && <span className="ml-2 text-white/20">· {version}</span>}
         </p>
       </div>

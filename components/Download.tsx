@@ -35,15 +35,6 @@ export default async function Download() {
             Download for Mac
             <span className="text-white/60 text-sm font-normal">Apple Silicon & Intel</span>
           </a>
-          <a
-            href="/download/windows"
-            className="flex items-center gap-3 bg-white/6 hover:bg-white/10 border border-white/10 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base w-full sm:w-auto justify-center"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M3 12V6.75l6-1.32v6.57H3zm17 0V5.5l-9 1.97V12h9zm-17 .75H9v6.57l-6-1.32v-5.25zm17 0h-9v5.53l9 1.97V12.75z" />
-            </svg>
-            Download for Windows
-          </a>
         </div>
 
         {version && (

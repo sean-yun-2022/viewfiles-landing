@@ -7,8 +7,8 @@ const faqs = [
     a: "All your files stay on your computer. View Files never uploads or transmits your files to any server. It reads local files and displays them — that's it.",
   },
   {
-    q: "Does it support both Mac and Windows?",
-    a: "Yes. View Files supports Mac (Apple Silicon and Intel) and Windows. One license activates on up to 2 devices.",
+    q: "Which Mac models are supported?",
+    a: "View Files supports Mac with Apple Silicon (M1 and later) and Intel. Windows support is coming soon.",
   },
   {
     q: "How do the AI features work?",

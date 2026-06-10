@@ -11,6 +11,8 @@ export default function Footer() {
           <a href="mailto:support@viewfiles.app" className="hover:text-white/60 transition-colors">support@viewfiles.app</a>
           <a href="#faq" className="hover:text-white/60 transition-colors">FAQ</a>
           <a href="#pricing" className="hover:text-white/60 transition-colors">Pricing</a>
+          <a href="/terms" className="hover:text-white/60 transition-colors">Terms</a>
+          <a href="/privacy" className="hover:text-white/60 transition-colors">Privacy</a>
         </div>
       </div>
     </footer>

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  verification: {
+    google: "FRKzqMoq9vUtpdc5skClzfVc57WcqAnAFyJ0Qeo5_wA",
+  },
   title: "View Files — Universal File Viewer for Mac & Windows",
   description: "Open PDF, Word, Excel, PPT, Markdown, and more without switching apps. AI-powered knowledge management built in.",
   icons: {

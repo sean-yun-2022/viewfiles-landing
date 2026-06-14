@@ -68,10 +68,6 @@ export default function PrivacyPage() {
               processing. This only occurs when you explicitly trigger an AI feature.
             </p>
             <p className="mt-3">
-              If you use your own API key (BYOK), your key is stored locally on your device using
-              your system's secure keychain. It is never transmitted to our servers.
-            </p>
-            <p className="mt-3">
               Please review{" "}
               <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer"
                 className="text-[#5b8af0] hover:underline">Anthropic's Privacy Policy</a>{" "}
@@ -98,7 +94,7 @@ export default function PrivacyPage() {
               All data is encrypted in transit (TLS) and at rest.
             </p>
             <p className="mt-3">
-              Your API keys and session tokens are stored locally using your operating system's
+              Your session tokens are stored locally using your operating system's
               secure keychain (macOS Keychain) and never leave your device.
             </p>
           </section>

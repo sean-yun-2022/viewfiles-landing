@@ -105,9 +105,8 @@ export default function TermsPage() {
               processing.
             </p>
             <p className="mt-3">
-              AI features using the built-in key are limited to 30 uses per month on the free plan.
-              Users may connect their own API key (BYOK) for unlimited use. When using BYOK, your
-              API key is stored locally on your device and never transmitted to our servers.
+              AI features are limited to 20 uses per month during the free trial and 100 uses per
+              month on the Pro plan.
             </p>
           </section>
 

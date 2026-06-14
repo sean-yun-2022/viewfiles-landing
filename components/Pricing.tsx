@@ -5,7 +5,7 @@ const freeFeatures = [
   "Universal File Viewer",
   "Built-in Web Browser",
   "Notes & Web Clips",
-  "AI Knowledge Save (30/mo)",
+  "AI Knowledge Save (20/mo)",
   "Full-text Search",
   "3D Knowledge Graph",
 ];
@@ -13,8 +13,7 @@ const freeFeatures = [
 const proFeatures = [
   "Everything in Trial",
   "Unlimited access forever",
-  "AI Summary (30/mo)",
-  "BYOK for unlimited AI",
+  "AI Summary (100/mo)",
   "Priority support",
 ];
 

@@ -1,46 +1,58 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import ViewerMockup from "./mockups/ViewerMockup";
-import AIMockup from "./mockups/AIMockup";
-import GraphMockup from "./mockups/GraphMockup";
-import BrowserMockup from "./mockups/BrowserMockup";
 
 const tabs = [
+  {
+    id: "filter",
+    label: "Filter by Type",
+    icon: "🗂️",
+    headline: "Browse by file type, not by folder",
+    desc: "Group every PDF, doc, image, and snippet of code with a single click — no more digging through messy folders.",
+    img: "/guide/05-filter-by-type.png",
+  },
   {
     id: "viewer",
     label: "Universal Viewer",
     icon: "📄",
     headline: "Open any file instantly",
-    desc: "PDF, Word, Excel, PPT, Markdown, images, and code — all in one place. No extra apps. No waiting.",
-    mockup: <ViewerMockup />,
-  },
-  {
-    id: "ai",
-    label: "AI Summary",
-    icon: "✦",
-    headline: "AI that lives next to your files",
-    desc: "Summarize any document, extract key points, and save insights to your knowledge base — without leaving the app.",
-    mockup: <AIMockup />,
+    desc: "PDF, Word, Excel, PowerPoint, Markdown, images, and code — all previewed in full, in one window. No extra apps.",
+    img: "/guide/07-universal-viewer.png",
   },
   {
     id: "browser",
-    label: "Browser & Clips",
+    label: "Built-in Browser",
     icon: "🌐",
-    headline: "Browse and clip the web",
-    desc: "Use the built-in browser to research without leaving the app. Hit Knowledge Save on any page to clip, summarize, and add it to your graph.",
-    mockup: <BrowserMockup />,
+    headline: "Research without leaving the app",
+    desc: "A real browser is built right in, so you can read sources and gather references side-by-side with your files.",
+    img: "/guide/08-built-in-browser.png",
+  },
+  {
+    id: "ai",
+    label: "Clip + AI",
+    icon: "✦",
+    headline: "AI that lives next to your files",
+    desc: "Clip any page and AI summarizes it, pulls the key points, tags it, and files it into your knowledge base — automatically.",
+    img: "/guide/09-clip-a-page-ai-does-the-filing.png",
   },
   {
     id: "graph",
     label: "Knowledge Graph",
     icon: "◈",
     headline: "See how your knowledge connects",
-    desc: "Every file, note, and web clip you save becomes a node in your personal 3D knowledge graph. Discover connections you never noticed.",
-    mockup: <GraphMockup />,
+    desc: "Every file, note, and web clip becomes a node in your personal 3D knowledge graph. Discover links you never noticed.",
+    img: "/guide/11-3d-knowledge-graph.png",
+  },
+  {
+    id: "search",
+    label: "Search",
+    icon: "🔍",
+    headline: "Search inside everything",
+    desc: "Full-text search across file contents, notes, and clips — not just filenames. Find anything in a snap.",
+    img: "/guide/12-full-text-search.png",
   },
 ];
 
-const AUTO_INTERVAL = 2000;
+const AUTO_INTERVAL = 5000;
 
 export default function Features() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -62,8 +74,8 @@ export default function Features() {
   const handleTabClick = (idx: number) => {
     setActiveIdx(idx);
     setPaused(true);
-    // 5초 후 자동 재개
-    setTimeout(() => setPaused(false), 5000);
+    // 8초 후 자동 재개
+    setTimeout(() => setPaused(false), 8000);
   };
 
   const current = tabs[activeIdx];
@@ -77,7 +89,7 @@ export default function Features() {
             Everything you need, nothing you don't
           </h2>
           <p className="text-white/50 text-lg max-w-xl mx-auto">
-            Four core features that replace five different apps.
+            Six core features that replace half a dozen different apps.
           </p>
         </div>
 
@@ -104,8 +116,8 @@ export default function Features() {
           {tabs.map((_, idx) => (
             <div key={idx} className="h-0.5 flex-1 max-w-16 rounded-full bg-white/10 overflow-hidden">
               <div
-                className={`h-full rounded-full bg-[#5b8af0] transition-all ${
-                  activeIdx === idx && !paused ? "animate-progress" : activeIdx === idx ? "w-full" : "w-0"
+                className={`h-full rounded-full bg-[#5b8af0] ${
+                  activeIdx === idx && !paused ? "" : activeIdx === idx ? "w-full" : "w-0"
                 }`}
                 style={activeIdx === idx && !paused ? {
                   animation: `progress ${AUTO_INTERVAL}ms linear`,
@@ -118,10 +130,10 @@ export default function Features() {
         {/* Content */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
           <div className="md:col-span-2 flex flex-col gap-4">
-            <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug">
+            <h3 key={current.id + "-h"} className="text-2xl md:text-3xl font-bold text-white leading-snug animate-fadein">
               {current.headline}
             </h3>
-            <p className="text-white/50 leading-relaxed">
+            <p key={current.id + "-d"} className="text-white/50 leading-relaxed animate-fadein">
               {current.desc}
             </p>
             <a
@@ -132,7 +144,19 @@ export default function Features() {
             </a>
           </div>
           <div className="md:col-span-3">
-            {current.mockup}
+            <div className="relative w-full aspect-[16/10] flex items-center justify-center rounded-2xl bg-white/[0.02] border border-white/8 overflow-hidden">
+              {tabs.map((tab, idx) => (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  key={tab.id}
+                  src={tab.img}
+                  alt={tab.headline}
+                  className={`absolute max-w-[94%] max-h-[92%] object-contain transition-opacity duration-700 ${
+                    activeIdx === idx ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -142,6 +166,11 @@ export default function Features() {
           from { width: 0% }
           to   { width: 100% }
         }
+        @keyframes fadein {
+          from { opacity: 0; transform: translateY(4px) }
+          to   { opacity: 1; transform: translateY(0) }
+        }
+        .animate-fadein { animation: fadein 0.5s ease both }
       `}</style>
     </section>
   );

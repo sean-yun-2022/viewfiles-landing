@@ -57,8 +57,8 @@ export default function TermsPage() {
               After the trial period, continued use requires a paid subscription:
             </p>
             <ul className="list-disc list-inside mt-2 space-y-1 ml-2">
-              <li><strong className="text-white">Pro Monthly:</strong> $4.99 per month</li>
-              <li><strong className="text-white">Pro Annual:</strong> $39 per year</li>
+              <li><strong className="text-white">Pro Monthly:</strong> $0.99 per month</li>
+              <li><strong className="text-white">Pro Annual:</strong> $9.99 per year</li>
             </ul>
             <p className="mt-3">
               Payments are processed securely through Lemon Squeezy. By subscribing, you agree to

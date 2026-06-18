@@ -43,7 +43,7 @@ export default function Pricing() {
               onClick={() => setAnnual(true)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${annual ? "bg-white text-black" : "text-white/50 hover:text-white"}`}
             >
-              Annual <span className="text-green-500 ml-1">−35%</span>
+              Annual <span className="text-green-500 ml-1">−16%</span>
             </button>
           </div>
         </div>
@@ -80,12 +80,12 @@ export default function Pricing() {
             <h3 className="text-[#5b8af0] font-medium text-sm mb-1">Pro</h3>
             <div className="flex items-end gap-1 mb-1">
               <span className="text-4xl font-bold text-white">
-                {annual ? "$39" : "$4.99"}
+                {annual ? "$9.99" : "$0.99"}
               </span>
               <span className="text-white/40 mb-1.5">{annual ? "/yr" : "/mo"}</span>
             </div>
             {annual && (
-              <p className="text-green-400 text-sm mb-1">or $4.99/mo — save 35%</p>
+              <p className="text-green-400 text-sm mb-1">or $0.99/mo — save 16%</p>
             )}
             <p className="text-white/40 text-sm mb-8">One payment, unlimited access</p>
             <ul className="space-y-3 mb-8">

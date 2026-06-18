@@ -13,7 +13,7 @@ const freeFeatures = [
 const proFeatures = [
   "Everything in Trial",
   "Unlimited access forever",
-  "AI Summary (100/mo)",
+  "AI Summary (30/mo)",
   "Priority support",
 ];
 

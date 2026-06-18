@@ -105,7 +105,7 @@ export default function TermsPage() {
               processing.
             </p>
             <p className="mt-3">
-              AI features are limited to 20 uses per month during the free trial and 100 uses per
+              AI features are limited to 20 uses per month during the free trial and 30 uses per
               month on the Pro plan.
             </p>
           </section>

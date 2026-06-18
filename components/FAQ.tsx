@@ -12,15 +12,11 @@ const faqs = [
   },
   {
     q: "How do the AI features work?",
-    a: "The default plan includes 30 AI summaries and Knowledge Saves per month. For unlimited use, add your Claude API key (BYOK) in Settings.",
-  },
-  {
-    q: "What is BYOK (Bring Your Own Key)?",
-    a: "BYOK lets you connect your own Anthropic API key to View Files. Once connected, AI summarization, auto-tagging, and Knowledge Save become unlimited.",
+    a: "AI summarizes documents and web pages, auto-tags them, and saves them to your knowledge base. The 30-day free trial includes 20 AI uses per month; Pro includes 30 per month.",
   },
   {
     q: "What happens to my data after the trial ends?",
-    a: "If you don't upgrade to Pro after the 30-day trial, core features like the file viewer, browser, and notes will be restricted. Your files are never deleted — they remain on your computer.",
+    a: "After the 30-day trial, the file viewer, browser, notes, clips, and search stay free — only AI features require Pro. Your files are never deleted; they remain on your computer.",
   },
   {
     q: "What is your refund policy?",

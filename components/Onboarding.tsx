@@ -25,9 +25,9 @@ const steps = [
   },
   {
     num: "05",
-    title: "Use AI Features (Optional)",
-    desc: "30 AI summaries per month included. Connect your Claude API key (BYOK) for unlimited use.",
-    detail: "BYOK supported · Enabled on Pro plan",
+    title: "Use AI Features",
+    desc: "Summarize and auto-tag any document or web page, then save it to your knowledge base. 20 AI uses/month on the trial, 30/month on Pro.",
+    detail: "Powered by Claude · Pro plan",
   },
 ];
 
